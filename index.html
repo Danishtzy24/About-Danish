@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Profesional</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #16a085;
+            --text-color: #333;
+            --light-text-color: #ecf0f1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-text-color);
+            padding: 60px 0;
+            text-align: center;
+        }
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid yellow; /* Border kuning */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .info-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .school-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 20px 0;
+        }
+        .school-slide {
+            flex: 0 0 auto;
+            width: 300px;
+            margin-right: 20px;
+            scroll-snap-align: start;
+        }
+        .school-slide img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .school-slide img:hover {
+            transform: scale(1.05);
+        }
+        .social-accounts, .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .social-account, .hobby {
+            background: var(--secondary-color);
+            color: var(--light-text-color);
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .social-account:hover, .hobby:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="cyn.jpg" alt="Foto Profil" class="profile-img">
+        <h1>Muhammad Danish Haikal</h1>
+        <p class="tagline">Hi!. Saya adalah seorang website builder pemula dan saya juga bisa membuat game di roblox studio</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>About Danish</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Tanggal Lahir:</strong>
+                    <p>11 Desember 2009</p>
+                </div>
+                <div class="info-item">
+                    <strong>Umur:</strong>
+                    <p><span id="age"></span> tahun</p>
+                </div>
+                <div class="info-item">
+                    <strong>Lokasi:</strong>
+                    <p>Jakarta Selatan, Indonesia</p>
+                </div>
+                <div class="info-item">
+                    <strong>Email:</strong>
+                    <p>danish1122009@gmail.com</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Pendidikan</h2>
+            <div class="school-slider">
+                <div class="school-slide">
+                    <img src="SDT Pelitahati.jpg">
+                    <p><strong>SDT Pelitahati</strong><br>2016 - 2022</p>
+                </div>
+                <div class="school-slide">
+                    <img src="MTsN 2.jpeg" alt="Sekolah 2">
+                    <p><strong>MTsN 2 Jakarta Selatan</strong><br>2023 - sekarang</p>
+                </div>
+                <div class="school-slide">
+                    <img src="Belum Tau.webp" alt="Sekolah 3">
+                    <p><strong>???????</strong><br>2025 - 2028</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Akun Game dan Sosial Media</h2>
+            <div class="social-accounts">
+                <div class="social-account">Mobile Legends: username_ml</div>
+                <div class="social-account">Roblox: username_roblox</div>
+                <div class="social-account">YouTube: channel_name</div>
+                <div class="social-account">TikTok: tiktok_username</div>
+                <div class="social-account">Instagram: ig_username</div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Hobi dan Minat</h2>
+            <div class="hobbies">
+                <div class="hobby">Bikin Game</div>
+                <div class="hobby">Bikin Music</div>
+                <div class="hobby">Bikin Website</div>
+                <div class="hobby">Main ML dan Roblox</div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Cita-cita dan Visi</h2>
+            <p>Deskripsikan cita-cita dan visi Anda di sini. Jelaskan apa yang ingin Anda capai dalam karir atau kehidupan pribadi Anda.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Tentang Saya</h2>
+            <p>Ini adalah tempat untuk menulis deskripsi yang lebih panjang tentang diri Anda. Anda bisa menjelaskan latar belakang, pengalaman, keterampilan, atau hal-hal menarik lainnya yang ingin Anda bagikan.</p>
+        </section>
+    </div>
+
+    <script>
+        function calculateAge(birthDate) {
+            const today = new Date();
+            const birth = new Date(birthDate);
+            let age = today.getFullYear() - birth.getFullYear();
+            const monthDiff = today.getMonth() - birth.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        document.getElementById('age').textContent = calculateAge('2009-11-12');
+    </script>
+</body>
+</html>
